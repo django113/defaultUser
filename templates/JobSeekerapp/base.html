@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>svr ananthadithya foundation</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{% static 'static/favicon-16x16.png' %}">
+    <link href="{% static 'main/css/style.css' %}" rel="stylesheet">
+
+    <!-- Google Fonts -->
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins"/>
+    <!--  Bootstrap Css -->
+    <link rel="stylesheet" href="{% static 'assets/plugins/bootstrap/css/bootstrap.css' %}">
+{#    <!--  Animation Css -->#}
+    <link rel="stylesheet" href="{% static '/../../../../../cdn.linearicons.com/free/1.0.0/icon-font.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/animate.css' %}">
+    <!-- Plugin CSS -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css" />
+    <link rel="stylesheet" href="{% static 'assets/plugins/thimfy-icon/themify-icons.css' %}"/>
+        <link rel="stylesheet" href="{% static 'assets/css/jquery-ui.css' %}"/>
+    <link rel="stylesheet" href="{% static 'assets/plugins/icofont/css/icofont.css' %}">
+    <!--  Fontawesome Css -->
+    <link rel="stylesheet" href="{% static 'assets/plugins/font-awesome/css/font-awesome.min.css' %}">
+    <!--  Master Slider Css -->
+    <link rel="stylesheet" href="{% static 'assets/plugins/masterslider/style/masterslider.css' %}"/>
+    <!--  Master Slider Skin -->
+    <link rel="stylesheet" href="{% static 'assets/plugins/masterslider/skins/default/style.css' %}"/>
+    <!--  Owl Carousel -->
+    <link rel="stylesheet" href="{% static 'assets/plugins/owl-carousel/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/plugins/owl-carousel/css/owl.theme.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/plugins/owl-carousel/css/owl.transitions.css' %}">
+    <!--  Custom Css -->
+    <link rel="stylesheet" href="{% static 'assets/css/layout.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}">
+    <link rel="stylesheet" href="{% static 'wowjs/animate.css' %}">
+
+
+{#    <script type="text/javascript" src="{% static 'bower_components/jquery/dist/jquery.js' %}"></script>#}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css" integrity="sha512-xX2rYBFJSj86W54Fyv1de80DWBq7zYLn2z0I9bIhQG+rxIF6XVJUpdGnsNHWRa6AvP89vtFupEPDP8eZAtu9qA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script type="text/javascript" src="{% static 'main/js/ajax.js' %}"></script>
+
+{% block styles %}{% endblock %}
+    <style>
+        div.ex1 {
+            background-color: lightblue;
+            height: 260px;
+            width: 100%;
+            overflow-y: scroll;
+        }
+
+        @media (max-width: 768px) and (min-width: 320px) {
+            .navbar-toggler {
+                float: right;
+                position: absolute;
+                left: 285px;
+            }
+        }
+
+        @media (max-width: 1159px) and (min-width: 320px) {
+            .navbar-light.active .logo1 {
+                background: url("{% static 'assets/images/logo2.png' %}") !important;
+                height: 56px;
+                width: 124px;
+                background-repeat: no-repeat;
+                visibility: visible;
+            }
+        }
+    </style>
+</head>
+<body id="page-top">
+
+<!-- Nav Bar -->
+<nav class="navbar fixed-top navbar-expand-lg navbar-light" id="header-fix">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+                <a href="index.php">
+                    <img src="{% static 'assets/images/logo.png' %}" class="navbar-brand image" id="img1"
+                         onscroll="show()">
+                    <script type="text/javascript">
+                        function show() {
+                            $("#img1").attr("src", "{% static 'assets/images/logo.png' %}");
+                        }
+
+                        function show1() {
+                            $("#img1").attr("src", "http://www.svrananthadithyafoundation.org/assets/images/svrlogo@.png");
+                        }
+
+
+                    </script>
+                    <div class="logo1">
+
+                    </div>
+                </a>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03"
+                    aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
+                <div class="collapse navbar-collapse justify-content-center ad" id="navbarColor03">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item" style="margin-top:0.5pc">
+                            <a class="nav-link active" href="index.php">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.php">About</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true"
+                               aria-expanded="false">Services</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="Area_work.php">Area of work</a>
+                                <a class="dropdown-item" href="education.php">Education</a>
+                                <a class="dropdown-item" href="employability.php">Employability</a>
+                                <a class="dropdown-item" href="enterpreneur.php">Enterpreneurship</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true"
+                               aria-expanded="false">Csr initiative</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="csr.php">connect on social media</a>
+                                <a class="dropdown-item" href="contact.php">Contact Us</a>
+                            </div>
+                        </li>
+                        
+                     <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true"
+                               aria-expanded="false">Registration</a>
+                            <div class="dropdown-menu">
+
+                                <a class="dropdown-item" href="{% url 'dashboard:Register_JobSeeker' %}">Jobseeker Registration</a>
+                                <a class="dropdown-item" href="/EmployeeLogin/">EmployeeLogin</a>
+                                <a class="dropdown-item" href="Post_Job_Registration.php">Post a Job Registration</a>
+                            </div>
+
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true"
+                               aria-expanded="false">Counseling</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="student_counselling.php">Student Counseling</a>
+                                <a class="dropdown-item" href="family_counselling.php">Family Counseling</a>
+                            </div>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="careers.php">Careers</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="gallery.php">Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="team.php">Team</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="donate.php">Donate</a>
+                        </li>
+                                               
+                        {% if user.is_authenticated%}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+                        </li>
+                        {% else %}
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'user-login' %}">Login</a>
+                        </li>
+                        {% endif %}
+ 
+                    </ul>
+
+                        
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<style>
+    .navbar-light.active #img1 {
+        display: none;
+    }
+
+    .navbar-light .logo1 {
+        visibility: hidden;
+    }
+
+    .navbar-light.active .logo1 {
+        background: url(http://www.svrananthadithyafoundation.org/assets/images/svrlogo@.png);
+        height: 100px;
+        width: 200px;
+        background-repeat: no-repeat;
+        visibility: visible;
+    }
+
+    #nav-home-tab, #nav-profile-tab {
+        width: 50%;
+        background: #0b4370;
+        padding: 10px;
+        color: #fff;
+    }
+
+    .image {
+        width: 200px
+    }
+
+    @media (max-width: 360px) and (min-width: 920px) {
+        .navbar-toggler {
+            float: right;
+            position: absolute;
+            left: 285px;;
+        }
+    }
+
+    #header-fix.active.navbar-light .navbar-nav .nav-link {
+        color: black !important;
+    }
+
+    #header-fix.active.navbar-brand {
+    !important;
+    }
+
+    .card img {
+        height: 225px !important;
+    }
+
+
+    @media (max-width: 360px) and (min-width: 960px) {
+        .ph {
+            margin-top: 20px;
+        }
+    }
+
+    input[type=text], select, textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+    }
+
+    input[type=submit] {
+        background-color: #f97208;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    input[type=submit]:hover {
+        background-color: #2b5171;
+    }
+
+    .job {
+        text-align: center !important;
+    }
+
+    .back {
+        background: #e8e7e7;
+        color: #083153;
+        padding: 30px;
+    }
+
+    .ss {
+        border: 1px solid #2a4f6e;
+        padding: 25px;
+    }
+
+    .sm {
+        color: #ffffff;
+    }
+
+    .cr {
+        background: #2b5171;
+        padding: 50px;
+        border-radius: 40px;
+        box-shadow: 15px 15px grey;
+    }
+
+    .display-4 {
+        font-size: 30px !important;
+    }
+
+</style>
+
+{% block header %}{% endblock %}
+<!--Courses starts-->
+<section>
+    <div class="container">
+        <div class="row">
+            <h3 class="job">{% block register %}{% endblock %}</h3>
+            {% if messages %}
+                {% for mess in messages %}
+                    <div class="alert alert-{{ mess.tags }}" role="alert">
+                        {{ mess }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+{#            {% block content-item %}{% endblock %}#}
+            <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9 ss">
+            {% block content %}{% endblock %}
+            </div>
+        {% block count %}{% endblock %}
+        </div>
+    </div>
+</section>
+
+
+<div id="fb-root"></div>
+<script>(function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.2';
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+{#<!--footer section starts-->#}
+<section class="footer">
+    <div class="container">
+        <div class="row animatedParent animateOnce animateOnce">
+            <div class="col-lg-3 col-md-6">
+                <h5 class="text-uppercase text-white">About Us</h5>
+                <p>Svr is one of the best organisation which makes your career beautifully & you can fulfill your dreams
+                    with our organization and you can improve your technical skills.</p>
+                <h6 class="text-white">Follow Us:-</h6>
+                <ul class="list-inline">
+                    <li class="list-inline-item pr-2"><a href="https://www.facebook.com/" class="text-white"><i
+                            class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    <li class="list-inline-item pl-2 pr-2"><a href="https://twitter.com/svrananthadith1"
+                                                              class="text-white"><i class="fa fa-twitter"
+                                                                                    aria-hidden="true"></i></a></li>
+                    <li class="list-inline-item pl-2 pr-2"><a
+                            href="https://www.linkedin.com/in/svr-svrananthadithyafoundation-3b2760175/"
+                            class="text-white"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2 col-md-6">
+                <h5 class="text-uppercase text-white">Useful Links</h5>
+                <ul class="list-inline">
+                    <li class="list-block-item"><span class="ti-angle-double-right"></span> <a href="#"> Home</a></li>
+                    <li class="list-block-item"><span class="ti-angle-double-right"></span> <a href="#"> About Us</a>
+                    </li>
+                    <li class="list-block-item"><span class="ti-angle-double-right"></span> <a href="#"> Services</a>
+                    </li>
+                    <li class="list-block-item"><span class="ti-angle-double-right"></span> <a href="#"> CSR
+                        initiative</a></li>
+                    <li class="list-block-item"><span class="ti-angle-double-right"></span> <a href="#">
+                        Registration</a></li>
+                    <li class="list-block-item"><span class="ti-angle-double-right"></span> <a href="#"> Counseling</a>
+                    </li>
+                    <li class="list-block-item"><span class="ti-angle-double-right"></span> <a href="contact.html">
+                        carrers</a></li>
+                    <li class="list-block-item"><span class="ti-angle-double-right"></span> <a href="#"> Gallery</a>
+                    </li>
+                    <li class="list-block-item"><span class="ti-angle-double-right"></span> <a href="#"> Team</a></li>
+                    <li class="list-block-item"><span class="ti-angle-double-right"></span> <a href="#"> Donate</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <h5 class="text-uppercase text-white">RECENT TWEETS</h5>
+                <div class="ex1"><a class="twitter-timeline" href="https://twitter.com/svrananthadith1"
+                                    style="min-height:150px;overflow-y:scroll;">National Park Tweets - Curated tweets by
+                    TwitterDev</a>
+                    <script async src="https://platform.twitter.com/widgets.js' %}" charset="utf-8"></script>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h5 class="text-uppercase text-white">Facebook </h5>
+                <div class="fb-page" data-href="https://www.facebook.com/Svrananthadithyafoundation-1201402959998774/"
+                     data-tabs="timeline" data-small-header="false" data-adapt-container-width="true"
+                     data-hide-cover="false" data-show-facepile="true">
+                    <blockquote cite="https://www.facebook.com/Svrananthadithyafoundation-1201402959998774/"
+                                class="fb-xfbml-parse-ignore"><a
+                            href="https://www.facebook.com/Svrananthadithyafoundation-1201402959998774/">Svrananthadithyafoundation</a>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{#<!--footer section ends-->#}
+<!-- Copyright -->
+<div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 text-left">Copyright © SVR AnanthAdithya Foundation. All Rights Reserved</div>
+            <div class="col-lg-6 col-md-6 text-right">Powered By <a href="http://adroitsws.com/">ADROITSWS </a>
+
+            </div>
+        </div>
+    </div>
+</div>
+<script src="{% static 'wowjs/wow.js' %}"></script>
+<script src="{% static 'wowjs/wow.min.js' %}"></script>
+
+<script>
+    new WOW().init();
+</script>
+<script type="text/javascript" src="{% static 'assets/plugins/bootstrap/js/jquery-3.2.1.slim.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'assets/plugins/bootstrap/js/popper.min.js' %}"></script>
+<!-- Bootstrap Js -->
+<script type="text/javascript" src="{% static 'assets/plugins/bootstrap/js/bootstrap.min.js' %}"></script>
+<!-- Header Scroll -->
+<script type="text/javascript" src="{% static 'assets/js/custom.js' %}"></script>
+<!-- Master Slider -->
+<script type="text/javascript" src="{% static 'assets/plugins/masterslider/jquery.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'assets/plugins/masterslider/masterslider.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'assets/js/master-slider-custom.js' %}"></script>
+<!-- Testimonials Slider Js -->
+<script type="text/javascript" src="{% static 'assets/plugins/owl-carousel/js/owl.carousel.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'assets/js/testimonials.js' %}"></script>
+<!-- Counter Js -->
+<script type="text/javascript" src="{% static 'assets/plugins/counter/jquery.waypoints.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'assets/plugins/counter/jquery.counterup.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'assets/js/counter-custom.js' %}"></script>
+<!-- Bg maker Custom Js -->
+<script type="text/javascript" src="{% static 'assets/js/bg-maker-custom.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+admin:	mohan  123
+hr	ajay	Mnbvcxz@123----------------->active and staff will true
+mis	vijay	Mnbvcxz@123------------------>active and staff will true
+
+rolls --------(groups)--------------HR,MIS
+staff  permission is give by  admin.
+
+1.admin will manage all.
+2.hr manage
+	jobseeker change and  view
+3.mis manage
+	jobseeker add and view ,delete,export  excel

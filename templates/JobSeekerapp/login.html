@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+{% extends 'JobSeekerapp/base.html' %}
+
+{% load widget_tweaks %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% load widget_tweaks %}
+
+{% block header %}
+    <!-- Inner Banner Starts -->
+<div class="inner-page-banner-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-md-12 mx-auto text-center">
+                <h2 class="font-weight-bold text-uppercase display-4 text-white">Login</h2>
+                <ol class="list-inline text-center">
+<!-- {#                    <li class="list-inline-item"><a href="#">Home </a> &nbsp; /</li>#} -->
+                    <li class="list-inline-item active">Login</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Inner Banner ends -->
+
+{% endblock %}
+
+{% block content %}
+    {% load crispy_forms_tags %}
+
+<!--Login-->
+{% load crispy_forms_tags %}
+{% load static %}
+<script type="text/javascript" src="{% static 'main/js/ajax.js' %}"></script>
+
+<div class="row">
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4">
+
+
+
+                        {% if otp %}
+                          <form method="POST">
+                            {% csrf_token %}
+                            <fieldset class="form-group">
+                                <legend class="border-bottom display">
+                                    <h3 class="float-left">Verify Your Email</h3>
+
+                                <img src="{% static 'assets/images/img.png' %}" class="logo float-right pt-1" width="25">
+                                </legend>
+                                <input type="hidden" name="usr" value="{{usr.username}}">
+                                <div class="input-group mb-3">
+                                  <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1">OTP</span>
+                                  </div>
+                                  <input type="text" class="form-control" placeholder="Enter Your OTP" aria-label="OTP" aria-describedby="basic-addon1" name = 'otp'>
+                                </div>
+
+                            </fieldset>
+                            <div class="form-grounp">
+                                <button class="btn mainbtn" type="submit">Verify</button>
+                                <small class="float-right text-muted"><i><a href="#" class="text-dark"
+                                  onclick="ReSendOTP('{{usr.username}}', 'resendOTPmess')"><i id="resendOTPmess">Resend</i> OTP</a></small>
+
+                            </div>
+
+                        </form>
+                       {% else %}
+                        <form method="POST">
+                            {% csrf_token %}
+                            <fieldset class="form-group">
+                                <legend class="border-bottom display">
+                                    <h3 class="float-left">Login</h3>
+
+                                <img src="{% static 'assets/images/img.png' %}" class="logo float-right pt-1" width="55">
+                                </legend>
+
+                                {{ form|crispy }}
+                            </fieldset>
+                            <div class="form-grounp">
+                                <button class="btn mainbtn" type="submit">Log In</button>
+                                <small class="float-right text-muted"><a href="{% url 'password_reset' %}" class="text-dark"> Forgotten Password?</a></small>
+
+                            </div>
+
+                        </form>
+                        {% endif %}
+               <br>
+           </div>
+           <div class="col-md">
+           </div>
+       </div>
+
+{% endblock %}
